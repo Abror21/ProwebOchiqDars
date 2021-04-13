@@ -279,8 +279,7 @@ p {
     &__title {
         position: absolute;
         left: 50%;
-        top: 0;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(0.00001);
         max-width: 520px;
         font-family: "Montserrat";
         font-weight: 600;
@@ -288,11 +287,12 @@ p {
         line-height: 65px;
         text-align: center;
         color: var(--white);
-        transition: 2s;
+        transition: .5s;
     }
 
     &.active &__title {
-        top: 50%;
+        transition: 3s;
+        transform: translateX(-50%) scale(1);
     }
 
     &__triangle {
